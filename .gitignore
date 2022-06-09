@@ -40,7 +40,8 @@
 # # Dependency directories
 node_modules/
 # jspm_packages/
-
+*.tfstate*
+*.lock*
 # # TypeScript v1 declaration files
 # typings/
 
