@@ -53,7 +53,7 @@ spec:
     spec:
       containers:
       - name: kubenews
-        image: tedydevops/kube-news:v1
+        image: tedydevops/kube-news:5
         env:
         - name: DB_USERNAME
           value: "kubenews"
@@ -76,4 +76,4 @@ spec:
   - port: 80
     targetPort: 8080
     nodePort: 30000
-  type: NodePort
+  type: LoadBalancer
