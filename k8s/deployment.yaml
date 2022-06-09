@@ -53,7 +53,7 @@ spec:
     spec:
       containers:
       - name: kubenews
-        image: fabricioveronez/kube-news:v1
+        image: tedydevops/kube-news:v1
         env:
         - name: DB_USERNAME
           value: "kubenews"
