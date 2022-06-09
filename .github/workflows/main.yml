@@ -37,3 +37,21 @@ jobs:
             tedydevops/kube-news:latest
             tedydevops/kube-news:${{github.run_number}}
             
+  CD:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkou@v3
+     
+      - name: Kubernetes Set Context
+        uses: Azure/k8s-set-context@v2
+        with:
+          method: kubeconfig
+          kubeconfig: ${{secrets.K8S_CONFIG}}
+     
+      - name: Deploy to Kubernetes cluster
+        uses: Azure/k8s-deploy@v3.1
+        with:
+          images: tedydevops/kube-news:${{github.run_number}}
+          manifests: |
+            k8s/deployment.yaml
+        
