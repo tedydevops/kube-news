@@ -50,6 +50,10 @@ spec:
     metadata:
       labels:
         app: kubenews
+      annotations:
+        prometeus.io/scrape: "true"
+        prometeus.io/port: "8080"
+        prometeus.io/path: "/metrics"
     spec:
       containers:
       - name: kubenews
