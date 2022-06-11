@@ -16,7 +16,7 @@ $ cp ./kube_config.yaml ~/.kube/config
 ~~~
  #### - fazer no Github Actions o workflows a parte de CI e:
  3) no Github Settings criar Secrets: 
-  - DOCKERHUB_USER com a senha do dockerhub
+  - DOCKERHUB_USER com seu usuário do dockerhub
   - DOCKERHUB_PWD com a respectiva senha
 
 # parte de CD
