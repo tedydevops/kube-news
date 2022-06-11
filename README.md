@@ -14,11 +14,11 @@ $ terraform apply
 ~~~linux
 $ cp ./kube_config.yaml ~/.kube/config
 ~~~
- #### - fazer no Github Actions o main.yaml do [workflows](https://github.com/tedydevops/kube-news/tree/main/.github/workflows) a parte de CI e:
- 3) no Github Settings criar Secrets: 
+ 3) fazer no Github Actions o main.yaml do [workflows](https://github.com/tedydevops/kube-news/tree/main/.github/workflows) a parte de CI
+ 4) no Github Settings criar Secrets: 
   - DOCKERHUB_USER com seu usuário do dockerhub
   - DOCKERHUB_PWD com a respectiva senha
 
 # parte de CD
- 1) complementar o [workflows](https://github.com/tedydevops/kube-news/tree/main/.github/workflows) a parte de CD e:
+ 5) complementar o [workflows](https://github.com/tedydevops/kube-news/tree/main/.github/workflows) a parte de CD e:
  - criar Secrets: K8S_CONFIG  e dentro dele colar todo o conteudo do kubec_config.yaml
