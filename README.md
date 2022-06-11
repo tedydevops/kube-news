@@ -1,9 +1,9 @@
-## Pipeline completa desafios 01, 02, 03, 04, 05 do projeto "INICIATIVA DEVOPS" do Fabricio Veronez
-### dockerhub link: https://hub.docker.com/repository/docker/tedydevops/conversao-temperatura
+## Pipeline completa do projeto "INICIATIVA DEVOPS" do Fabricio Veronez
+### minha dockerhub: https://hub.docker.com/repository/docker/tedydevops/conversao-temperatura
 PIPELINE CI/CD etapas:
 # parte de CI
- 1) criar cluster na nuvem: 
- - criar [arquivo terraform](https://github.com/tedydevops/kube-news/tree/main/iac) main.tf com especificações do cluster a ser gerado.(***lembrar de criar .gitignore pra só subir main.tf no Github para não expor informações sensíveis como token da nuvem presentes nos *.tfstate e *.tfvars***)
+ 1) criar cluster na nuvem (no caso é a Digitalocean): 
+ - criar [arquivo terraform](https://github.com/tedydevops/kube-news/tree/main/iac) main.tf com especificações do cluster a ser gerado.(***lembrar de criar .gitignore pra só subir main.tf no Github para não expor informações sensíveis como token da nuvem, presente nos arquivos gerados *.tfstate e *.tfvars***)
  - na pasta com os arquivos de iac de terraform:
 ~~~linux
 $ terraform init
