@@ -35,9 +35,9 @@ $ helm upgrade --install prometheus prometheus-community/prometheus --set alertm
 ~~~linux
 $ kubectl get svc
 ~~~
-7) insert annotations at [k8s deployment.yaml](https://github.com/tedydevops/kube-news/tree/main/k8s):
+7) inserir annotations no [k8s deployment.yaml](https://github.com/tedydevops/kube-news/tree/main/k8s):
 - ![alt text](https://github.com/tedydevops/kube-news/blob/main/annotations.JPG)
-8) apply deployment.yaml changes:
+8) aplicar mudançças no deployment.yaml :
  ~~~linux
 $ kubectl apply -f deployment.yaml
 ~~~~
