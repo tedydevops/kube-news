@@ -22,3 +22,22 @@ $ cp ./kube_config.yaml ~/.kube/config
 # parte de CD
  5) complementar o [workflows](https://github.com/tedydevops/kube-news/tree/main/.github/workflows) a parte de CD e:
  - criar Secrets: K8S_CONFIG  e dentro dele colar todo o conteudo do kubec_config.yaml
+
+## Prometheus e Grafana
+
+6) na pasta kube-news instalar pelo helm, o [Prometheus do artifacthub](https://artifacthub.io/packages/helm/prometheus-community/prometheus):
+~~~linux
+$ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+$ helm repo update
+$ helm upgrade --install prometheus prometheus-community/prometheus --set alertmanager.enabled=false,server.persistenVolume.enabled=false,server.service.type=LoadBalancer,server.global.scrape_interval=10s
+~~~
+- para visualizar entre no EXTERNAL-IP do prometheus-server mostrado no: 
+~~~linux
+$ kubectl get svc
+~~~
+7) insert annotations at [k8s deployment.yaml](https://github.com/tedydevops/kube-news/tree/main/k8s):
+- ![alt text](https://github.com/tedydevops/kube-news/blob/main/annotations.JPG)
+8) apply deployment.yaml changes:
+ ~~~linux
+$ kubectl apply -f deployment.yaml
+~~~~
