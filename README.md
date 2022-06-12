@@ -31,13 +31,13 @@ $ helm repo add prometheus-community https://prometheus-community.github.io/helm
 $ helm repo update
 $ helm upgrade --install prometheus prometheus-community/prometheus --set alertmanager.enabled=false,server.persistenVolume.enabled=false,server.service.type=LoadBalancer,server.global.scrape_interval=10s
 ~~~
-- para visualizar entre no EXTERNAL-IP do prometheus-server mostrado no: 
-~~~linux
-$ kubectl get svc
-~~~
 7) inserir annotations no [k8s deployment.yaml](https://github.com/tedydevops/kube-news/tree/main/k8s):
 - ![alt text](https://github.com/tedydevops/kube-news/blob/main/annotations.JPG)
 8) aplicar mudançças no deployment.yaml :
  ~~~linux
 $ kubectl apply -f deployment.yaml
 ~~~~
+- obs.: caso queira acessar, abra pagina da internet e escreva "localhost:IP", substitua "IP" pelo EXTERNAL-IP do prometheus-server mostrado pelo comando: 
+~~~linux
+$ kubectl get svc
+~~~
