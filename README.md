@@ -18,7 +18,7 @@ $ cp ./kube_config.yaml ~/.kube/config
  4) no Github Settings criar Secrets: 
   - DOCKERHUB_USER com seu usuário do dockerhub
   - DOCKERHUB_PWD com a respectiva senha
-## 5) (***lembrar de criar .gitignore pra só subir main.tf no Github para não expor informações sensíveis como token da nuvem, presente nos arquivos gerados *.tfstate e *.tfvars e o kube_config.yaml !!!***)
+## 5) ***lembrar de criar .gitignore pra só subir main.tf no Github para não expor informações sensíveis como token da nuvem, presente nos arquivos gerados *.tfstate e *.tfvars e o kube_config.yaml !!!***
 # parte de CD
  5) complementar o [workflows](https://github.com/tedydevops/kube-news/tree/main/.github/workflows) a parte de CD e:
  - criar Secrets: K8S_CONFIG  e dentro dele colar todo o conteudo do kubec_config.yaml
