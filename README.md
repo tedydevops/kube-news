@@ -3,7 +3,7 @@
 PIPELINE CI/CD etapas:
 # parte de CI
  1) criar cluster na nuvem (no caso é a Digitalocean): 
- - criar [arquivo terraform](https://github.com/tedydevops/kube-news/tree/main/iac) main.tf com especificações do cluster a ser gerado.
+ - criar [arquivo terraform](https://github.com/tedydevops/kube-news/tree/main/iac) main.tf e o terraform.tfvars com especificações do cluster a ser gerado.
  - na pasta com os arquivos de iac de terraform:
 ~~~linux
 $ terraform init
